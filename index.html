@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfoli</title>
+</head>
+<style>
+    body
+    {
+        background-image: url(hacker1jpg);
+        color: antiquewhite;
+        
+    }
+
+    .main{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin: auto;
+        margin-top: 30PX;
+        text-align: center;
+    
+        column-gap:40px;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+    }
+    .right{
+    
+       display: flex;
+     flex-direction: row;
+        width:50%;
+   
+       
+        align-items:right;
+        text-align:right;
+        margin-right:20px;
+        
+      
+    }
+    .left{
+    
+     text-align: left;
+     width:50%;
+     justify-content:center;
+     align-items:center;
+   
+
+    
+    }
+    .info{
+        
+        color:black;
+        text-align:left;
+       
+
+    
+        
+    }
+    span{
+        color:orangered;
+    }
+    p{
+        font-size: 25px;
+    }
+    button{
+        
+        color: white;
+        width: 50%;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 15px;
+        font-family: roboto,arial;
+        cursor: pointer;
+        font-weight: bold;
+        transition:0.4s;
+    }
+    button:hover{
+        background-color:yellow;
+        color:green;
+        transition:0.4s;
+    }
+    
+    .icons{
+        display: flex;
+        flex-direction: row;
+     
+        text-align: left;
+        justify-content: left;
+        margin-left: 50px;
+        
+        margin-top:4%;
+        margin-bottom:4%;
+        
+           
+    }
+    .img1{
+        border-radius: 50px;
+        cursor: pointer;
+        width:100%;
+    }
+    .img2{
+        border-radius: 50px;
+        cursor: pointer;
+        width:100%;
+        margin-left:45px;
+    }
+
+    .img3{
+        width:100%;
+       
+        margin-left:20px;
+       
+        border-radius: 80px;
+    }
+  
+   .text{
+       display:flex;
+       flex-direction:row;
+       position: absolute;
+        
+       text-align:left;
+       margin-left: 2%;
+     
+       margin-top:20%;
+       
+   }
+   
+    h1{
+        font-size:30px;
+        
+    }  
+    .anchor{
+        margin-left: 16px;
+     margin-right: 16px;  
+    }
+    .images{
+        position: absolute;
+        top: 20%;
+        left: 60%;    
+        display: flex;
+        
+    }
+    .books{
+        width: 60%;
+        border-radius: 50%;
+        stroke-width: 20px;
+        
+        stroke: chartreuse;
+
+    }
+    .divimg{
+        width: 4%;
+    }
+    .background{
+        position: absolute;
+        z-index: -6;
+        width: 100%;
+    }
+    .backimg{
+        width: 100%;
+        height: 100vh;
+    }
+    .page{
+        display: flex;
+        width: 100vw;
+        background-color: azure;
+        justify-content: left;
+        text-align: left;
+        height: 100vh;
+        visibility: hidden;
+        position: absolute;
+        top:0;
+        left: 50%;
+        transform: translate(-50% -50%) scale(0.1);
+    }
+  .homepage{
+    background-image: url(pix.jpg);
+            background-position: 50% 0px;
+            min-height: 100vh !important;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+    
+  }
+  .login{
+    background-color: rgba(15, 187, 199, 0.164);
+    border-radius: 6px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    justify-content: center;
+    text-align: center;
+    box-shadow: black;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    position: absolute;
+    left:20%;
+    right: 20%;
+    top: 40%;
+    margin: auto;
+    
+    
+  }
+  .btn1{
+    height: 35px;
+    background-color: black;
+    text-align: center;
+    align-self: center;
+    position: absolute;
+    margin: auto;
+    left: 20%;
+    right:20%;
+    bottom: 20px;
+    font-size: 20px;
+    align-items: center;
+  }
+  input{
+    height: 25px;
+    border-radius: 4px;
+    outline: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .open-page{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(100%);
+  }
+  .pix{
+    color: chartreuse;
+    margin-left: 10px;
+  }
+  .close-login{
+    visibility: hidden;
+  }
+  .btn2{
+    background-color: white;
+    width: 8px;
+    height: 20px;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    align-items: center;
+   color:black;
+    right:13px;  
+    outline: 0; 
+    border: 0;
+    bottom: 53px;
+  }
+  .hire{
+    background-color: black;
+  }
+  .imgs{
+    width: 30px;
+    position: absolute;
+    bottom: 81px;
+    right: 18px;
+    mix-blend-mode: multiply;
+    cursor: pointer;
+    color: rgb(245, 255, 240);
+  }
+  .in1{
+    color: antiquewhite;
+    font-weight: bold;
+    height: 35px;
+    font-size: 20px;
+    background-color: rgba(231, 231, 229, 0.212);
+    border-color: greenyellow;
+    border-radius: 8px;
+    outline: 0;
+  }
+  .in2{
+    color: antiquewhite;
+    height: 35px;
+    font-size: 20px;
+    border-color: greenyellow;
+    border-radius: 8px;
+    background-color: rgba(231, 231, 229, 0.212);
+  }
+  .lb1,.lb2{
+    font-size: 30px;
+  }
+  .profile{
+    height: 100px;
+    width: 80px;
+    position: absolute;
+    align-self: center;
+    margin: auto;
+    top: -15%;
+    border-radius: 50%;
+  }
+</style>
+<body >
+    
+    <div class="homepage">
+        <div class="login" id="login">
+            <img class="profile" src="hacker4.jpg" alt="">
+        <label class="lb1" for="">Username</label>
+        <input class="in1" id="username" type="text"><br>
+        <label class="lb2" for="">Password</label>
+        <input class="in2" id="password" type="password"><br>
+        <img class="imgs" id="eyeicon" src="hide eye icon.png" onclick="showpassword()"><br>
+        <button onclick="login()" class="btn1">Login</button>
+    </div>
+    </div>
+    
+<div class="page" id="page">
+    <div class="main">
+        <div class="left">           
+           <h1 class="pix">Pixels</h1> 
+        </div>
+        <div class="right">
+            <a href="https://pixels-1.github.io/Pixweb1/" >HISTORY</a>
+            <a class="anchor" href="https://pixels-1.github.io/about/">ABOUT</a>
+            <a href="https://pixels-1.github.io/services/">SERVICES</a>
+        </div>
+    </div>
+    
+<div class="text">     
+
+    <div class="info">
+        
+        <p>Hi, i'm Peterson.</p>
+        <h1><SPAn>W</SPAn>EB <SPAn>D</SPAn>EVELOPER <br> <SPAn>&</SPAn> <SPAn>D</SPAn>ESIGNER</h1>
+        <p>Web designer and Frontend developer from Nairobi,Kenya.
+        </p>
+        <button class="hire" Id="hire"  >Hire me</button>
+        
+
+    <div class="icons">
+       <div class="divimg"><a href="https://www.facebook.com/Petrofellorrissie.Karl" target="_blank"><img class="img1" src="Facebook.png" ></a></div> 
+       <div class="divimg"><a  href="https://twitter.com/Pixels" target="_blank"><img class="img3" src="twitter.jpg" ></a> </div>
+        <div class="divimg"> <a href="https://support.skype.com/Petrokarl?/chat" target="_blank"><img class="img2" src="Skype.jpg" ></a>  </div>
+       
+    </div>
+ </div>
+ 
+    
+ </div>
+</div>
+        <script> 
+
+            document.getElementById("hire").onclick= function(){
+               window.alert("Reach me out on WhatsApp in my About.Thank you!!!") 
+            }
+
+        </script>
+        <script>
+            let page=document.getElementById("page");
+            const username=document.getElementById("username");
+            const password=document.getElementById("password");
+            
+            function login(){
+                let pass=password.value;
+                let name=username.value;
+                
+                    if(name=="Pixels" && pass=="!@#254"){
+                        page.classList.add("open-page");
+                    }
+                    else if(name=="")
+                    {
+                        window.alert("You must fill in authorised username to continue!!");
+                    }
+                    else if(pass=="")
+                    {
+                        window.alert("You must enter authorised password!!");
+                    }  
+                     
+                    else{
+                        window.alert("Invalid credentials");
+                    }
+                  }
+    const eyeicon=document.getElementById("eyeicon");
+    function showpassword(){
+        
+    if(password.type=="password"){
+        password.type="text";     
+        eyeicon.src="show eye icon.jpg"
+         
+
+    }
+    else{
+        password.type="password";
+        eyeicon.src="hide eye icon.png"
+    }
+ }
+      
+
+        </script>
+        <script>
+ //let showpassword=document.getElementById("showpassword");
+ //let passa=document.getElementById("passa");
+ 
+
+
+           
+        </script>
+</body>
+</html>
